@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Fax Verifications by Twilio Verify and Twilio Programmable Fax</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.7/twilio.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+<header>
+    <p>Fax Verifications by Twilio Verify and Twilio Programmable Fax</p>
+</header>
+<main>
+    <form id="fromVerification">
+        <div class="form-group">
+            <label class="control-label">FAX番号</label>
+            <input class="form-control" type="text" name="fax_number">
+        </div>
+        <div class="form-group d-none">
+            <label class="control-label">認証コード</label>
+            <input class="form-control" type="text" name="auth_code">
+        </div>
+        <button class="btn btn-info" id="btnVerificationSend">送信</button>
+        <button class="btn btn-success d-none" id="btnVerificationCheckSend">認証</button>
+
+        <div id="result" class="alert d-none mt-2" role="alert">
+        </div>
+    </form>
+</main>
+</body>
+</html>
